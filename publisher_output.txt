@@ -1,0 +1,26 @@
+[DEBUG] [1594036896.978312, 0.000000]: init_node, name[/nods_practical_16814_1594036896842], pid[16814]
+[DEBUG] [1594036896.979699, 0.000000]: binding to 0.0.0.0 0
+[DEBUG] [1594036896.980979, 0.000000]: bound to 0.0.0.0 34377
+[DEBUG] [1594036896.982488, 0.000000]: ... service URL is rosrpc://ubuntu:34377
+[DEBUG] [1594036896.984282, 0.000000]: [/nods_practical_16814_1594036896842/get_loggers]: new Service instance
+[DEBUG] [1594036896.988167, 0.000000]: ... service URL is rosrpc://ubuntu:34377
+[DEBUG] [1594036896.994836, 0.000000]: [/nods_practical_16814_1594036896842/set_logger_level]: new Service instance
+[DEBUG] [1594036896.999240, 0.000000]: connecting to ubuntu 39623
+[INFO] [1594036897.010040, 0.000000]: Waiting for subscribers on /drone/takeoff ..
+takeoff sent
+[DEBUG] [1594036897.271548, 6229.289000]: connecting to ubuntu 39623
+[INFO] [1594036897.311047, 6229.302000]: /nods_practical_16814_1594036896842the distance to the wall is 0.0551410354674
+[INFO] [1594036902.046499, 6231.278000]: the drone is stopped at distance 2.0
+land sent
+[DEBUG] [1594036902.055404, 6231.281000]: connecting to ubuntu 39623
+
+
+=============================================
+----loginfo commands used in the code----
+
+rospy.init_node('nods_practical', anonymous=True, log_level=rospy.DEBUG)
+
+
+rospy.loginfo_throttle(2, "Waiting for subscribers on /drone/takeoff ..")
+
+rospy.loginfo("the drone is stopped at distance %s",current_distance)
